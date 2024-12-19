@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 63%;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../../img/hero-background.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  z-index: -1;
+}
+
+.hero__title {
+  padding-top: 27px;
+  line-height: 1;
+}
+
+.hero__slogan {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
