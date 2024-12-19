@@ -1,0 +1,60 @@
+.additional {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.additional__title {
+  padding-bottom: 36px;
+  font-size: 24px;
+  line-height: 1;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.additional__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.additional__item-title {
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.additional__item-value,
+.additional__item-description {
+  @include text;
+  line-height: 1;
+}
+
+.additional__button {
+  width: 100%;
+}
+
+.additional__gift {
+  position: relative;
+  padding: 185px 60px 45px;
+}
+
+.additional__gift::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../../img/gift-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  z-index: -1;
+}
+
+.additional__gift-text {
+  @include text;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}

@@ -1,1 +1,20 @@
-// Начните писать стили здесь
+// добавляем миксины и переменные
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// базовые стили
+@import "./base/fonts.scss";
+@import "./base/base.scss";
+
+// блоки компонентов
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/product.scss";
+@import "./blocks/additional.scss";
+@import "./blocks/selection.scss";

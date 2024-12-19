@@ -1,0 +1,42 @@
+.product__title {
+  padding-top: 27px;
+  padding-bottom: 40px;
+  line-height: 1;
+  border: 1px solid #ebebeb;
+  border-left: none;
+  border-right: none;
+}
+
+.product__list-item {
+  padding: 20px 20px 25px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.product__card-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #222222;
+}
+
+.product__card-title.product__card-title--more {
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+
+.product__card-list,
+.product__card-text {
+  @include text;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__button {
+  width: 100%;
+}
+
+.product__button--more.button {
+  color: #444444;
+  background-color: $base-color;
+}
