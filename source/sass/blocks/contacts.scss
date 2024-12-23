@@ -1,0 +1,21 @@
+.contacts__text-wrapper {
+  background-color: $base-color;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.contacts__text-wrapper.contacts__text-wrapper--main {
+  background-color: #ffffff;
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.contacts__text {
+  @include text;
+  line-height: 20px;
+}
