@@ -1,6 +1,6 @@
 .main-nav {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
@@ -11,4 +11,28 @@
 .main-nav__item-link {
   text-decoration: none;
   color: inherit;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: 33px;
+    max-width: 436px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list--main {
+    color: #ffffff;
+  }
 }

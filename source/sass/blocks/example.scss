@@ -4,8 +4,17 @@
   background-color: $base-color;
 }
 
+.example__title {
+  margin-bottom: 40px;
+}
+
 .example__text {
   @include text;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .example__item {
@@ -24,8 +33,61 @@
 }
 
 .example__total {
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example__costs-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__list {
+    gap: 43px;
+  }
+
+  .example__value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__description {
+    font-size: 14px;
+  }
+
+  .example__total {
+    flex-direction: column;
+    align-items: end;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__content-wrapper {
+    max-width: 435px;
+  }
+
+  .example__costs-wrapper {
+    flex-direction: column;
+  }
+
+  .example__list {
+    justify-content: start;
+  }
+
+  .example__total {
+    flex-direction: row;
+    justify-content: start;
+    gap: 63px;
+  }
 }

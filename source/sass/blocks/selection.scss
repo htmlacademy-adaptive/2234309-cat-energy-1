@@ -6,10 +6,22 @@
   padding-bottom: 19px;
 }
 
+.selection__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+}
+
 .selection__data {
   padding-bottom: 24px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.selection__data--additional {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 13px;
 }
 
 .selection__label,
@@ -28,6 +40,10 @@
   line-height: 26px;
 }
 
+.selection__send {
+  text-align: center;
+}
+
 .selection__button {
   width: 100%;
 }
@@ -35,4 +51,47 @@
 .selection__required-fields {
   @include text;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .selection__data--additional {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .selection__subtitle,
+  .selection__label,
+  .selection__field,
+  .selection__textarea {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .selection__legend {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .selection__send {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .selection__button {
+    width: 40%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection__form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 80px;
+  }
+
+  .selection__data--additional {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

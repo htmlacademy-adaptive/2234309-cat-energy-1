@@ -2,6 +2,36 @@
   margin-bottom: 30px;
 }
 
+.advantages__title {
+  margin-bottom: 40px;
+}
+
 .advantages__list {
   @include text;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__title {
+    margin-bottom: 40px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 150px;
+  }
+
+  .advantages__item {
+    max-width: 230px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    flex-wrap: nowrap;
+    gap: 94px;
+  }
 }
