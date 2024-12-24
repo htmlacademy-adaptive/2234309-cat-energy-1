@@ -30,3 +30,49 @@
   line-height: 1;
   text-transform: uppercase;
 }
+
+.hero__link.button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .hero {
+    text-align: left;
+    color: #000000;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero__wrapper {
+    padding-left: 120px;
+    padding-right: 0;
+    max-width: 600px;
+  }
+
+  .hero__title {
+    font-size: 60px;
+  }
+
+  .hero__slogan {
+    font-size: 20px;
+  }
+
+  .hero__link.button {
+    width: unset;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero::before {
+    display: block;
+    top: unset;
+    left: unset;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 118%;
+    background-size: 100%;
+  }
+}

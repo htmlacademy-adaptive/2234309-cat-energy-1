@@ -58,3 +58,26 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media (min-width: $tablet-width) {
+  .additional__title {
+    font-size: 36px;
+    border-bottom: none;
+  }
+
+  .additional__item-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .additional__list {
+    flex-grow: 1;
+  }
+}

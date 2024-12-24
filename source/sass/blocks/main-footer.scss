@@ -1,0 +1,20 @@
+.main-footer__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $base-color;
+}
+
+.main-footer__logo {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__bottom-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-footer__logo {
+    margin: 0;
+  }
+}

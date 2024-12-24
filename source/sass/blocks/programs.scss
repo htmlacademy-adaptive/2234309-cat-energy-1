@@ -3,11 +3,14 @@
 }
 
 .programs__list {
-  background-color: $base-color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .programs__item {
   padding: 0 20px;
+  background-color: $base-color;
 }
 
 .programs__title {
@@ -25,4 +28,31 @@
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .programs__list {
+    gap: 30px;
+  }
+
+  .programs__title {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    max-width: 1220px;
+  }
+
+  .programs__list {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
