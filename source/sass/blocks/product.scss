@@ -7,6 +7,10 @@
   border-right: none;
 }
 
+.product__list {
+  @include list;
+}
+
 .product__list-item {
   padding: 20px 20px 25px;
   border-bottom: 1px solid #ebebeb;

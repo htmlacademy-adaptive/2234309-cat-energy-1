@@ -3,6 +3,9 @@
   margin-bottom: 20px;
   text-align: center;
   color: #ffffff;
+  background-image: url("../../img/hero-background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .hero::before {
@@ -12,20 +15,25 @@
   left: 0;
   width: 100%;
   height: 63%;
-  background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("../../img/hero-background.png");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+  background: linear-gradient(135deg, #65a93e, #63a63b);
   z-index: -1;
+}
+
+.hero__wrapper {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero__title {
   padding-top: 27px;
+  margin-bottom: 24px;
   line-height: 1;
 }
 
 .hero__slogan {
+  margin-bottom: 30px;
+  margin-left: -2px;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
@@ -37,8 +45,10 @@
 
 @media (min-width: $tablet-width) {
   .hero {
+    margin-bottom: 0;
     text-align: left;
     color: #000000;
+    background-image: none;
   }
 
   .hero::before {
@@ -46,33 +56,69 @@
   }
 
   .hero__wrapper {
-    padding-left: 120px;
+    padding-left: 36px;
+    padding-bottom: 526px;
     padding-right: 0;
     max-width: 600px;
+    position: relative;
   }
 
   .hero__title {
+    padding-top: 65px;
+    margin-bottom: 41px;
     font-size: 60px;
   }
 
   .hero__slogan {
     font-size: 20px;
+    margin-bottom: 49px;
+    margin-left: 0;
   }
 
   .hero__link.button {
     width: unset;
   }
+
+  .hero__image {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -54px;
+    max-width: inherit;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .hero {
+    margin-bottom: 82px;
+  }
+
+  .hero__title {
+    padding-top: 111px;
+  }
+
   .hero::before {
     display: block;
-    top: unset;
+    top: -114px;
     left: unset;
     right: 0;
     bottom: 0;
     width: 50%;
-    height: 118%;
-    background-size: 100%;
+    height: 120%;
+    background: url("../../img/hero-background-desktop.png"), linear-gradient(135deg, #65a93e, #63a63b);
+    background-repeat: no-repeat;
+  }
+
+  .hero__wrapper {
+    max-width: 620px;
+    margin: 0;
+    padding-left: 190px;
+    padding-bottom: 184px;
+  }
+
+  .hero__image {
+    bottom: 52px;
+    left: unset;
+    right: -488px;
   }
 }

@@ -10,6 +10,10 @@
   border-bottom: 1px solid #cdcdcd;
 }
 
+.additional__list {
+  @include list;
+}
+
 .additional__item {
   padding-top: 13px;
   padding-bottom: 19px;

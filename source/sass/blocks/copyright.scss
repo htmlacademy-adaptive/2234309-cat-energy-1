@@ -1,10 +1,32 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__link {
   @include text;
   font-size: 16px;
   line-height: 20px;
+  margin-top: -3px;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+.copyright__icon:hover,
+.copyright__icon:focus {
+  fill: #68B738;
+}
+
+.copyright__icon:active {
+  fill: #68B738;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    gap: 23px;
+  }
 }

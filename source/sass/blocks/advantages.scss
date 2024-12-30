@@ -1,5 +1,5 @@
 .advantages {
-  margin-bottom: 30px;
+  margin-bottom: 49px;
 }
 
 .advantages__title {
@@ -8,12 +8,57 @@
 
 .advantages__list {
   @include text;
+  @include list;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.advantages__item {
+  position: relative;
+  padding-left: 80px;
+  padding-top: 1px;
+  min-height: 60px;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-repeat: no-repeat;
+  background-color: #68B738;
+  background-position: center;
+}
+
+.advantages__item--benefit::before {
+  background-image: url("../../img/icons/benefit.svg");
+}
+
+.advantages__item--ease::before {
+  background-image: url("../../img/icons/ease.svg");
+}
+
+.advantages__item--diet::before {
+  background-image: url("../../img/icons/diet.svg");
+}
+
+.advantages__item--result::before {
+  background-image: url("../../img/icons/result.svg");
+}
+
+.advantages__item br {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
+  .advantages {
+    margin-bottom: 48px;
+  }
+
   .advantages__title {
     margin-bottom: 40px;
   }
@@ -21,17 +66,64 @@
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 150px;
+    column-gap: 134px;
+    row-gap: 47px;
   }
 
   .advantages__item {
-    max-width: 230px;
+    max-width: 249px;
+    padding-left: 0;
+    padding-top: 144px;
+    padding-bottom: 57px;
+    line-height: 23px;
+  }
+
+  .advantages__item::after {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: -1;
+    min-width: 135px;
+    color: $base-color;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 1;
+  }
+
+  .advantages__item::before {
+    top: 32px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .advantages__item--benefit::after {
+    content: "1";
+  }
+
+  .advantages__item--ease::after {
+    content: "2";
+  }
+
+  .advantages__item--diet::after {
+    content: "3";
+  }
+
+  .advantages__item--result::after {
+    content: "4";
+  }
+
+  .advantages__item br {
+    display: block;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .advantages {
+    margin-bottom: 25px;
+  }
+
   .advantages__list {
     flex-wrap: nowrap;
-    gap: 94px;
+    gap: 76px;
   }
 }

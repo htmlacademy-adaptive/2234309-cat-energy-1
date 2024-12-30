@@ -1,24 +1,32 @@
 .example {
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 36px;
   background-color: $base-color;
 }
 
 .example__title {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .example__text {
   @include text;
+  margin-bottom: 21px;
 }
 
 .example__list {
+  @include list;
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 35px;
 }
 
 .example__item {
+  position: relative;
+  width: 100%;
+  padding: 13px 10px 17px;
   text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__value {
@@ -28,27 +36,114 @@
 
 .example__description {
   @include text;
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
   font-size: 12px;
   line-height: 1;
+  text-transform: lowercase;
+  background-color: $base-color;
 }
 
 .example__total {
   display: flex;
   justify-content: center;
+  gap: 3px;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 
+.example__slider {
+  position: relative;
+  width: 280px;
+}
+
+.example__slider-button {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.example__slider-button::after {
+  content: "";
+  position: absolute;
+  top: -107px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+  width: 4px;
+  height: 256px;
+  border-radius: 4px;
+  background-color: #666666;
+}
+
+.example__slider-button:hover svg path {
+  fill: #68B738;
+}
+
+.example__slider-button:hover svg rect {
+  stroke: #68B738;
+}
+
+.example__slider-button:hover::after {
+  background-color: #68B738;
+}
+
+.example__slider-button:focus svg path {
+  fill: rgba(94, 170, 47, 0.6);
+}
+
+.example__slider-button:focus svg rect {
+  stroke: rgba(94, 170, 47, 0.6);
+}
+
+.example__slider-button:focus::after {
+  background-color: rgba(94, 170, 47, 0.6);
+}
+
 @media (min-width: $tablet-width) {
+  .example {
+    padding-top: 45px;
+    padding-bottom: 99px;
+    border-top: 1px solid #E6E6E6;
+    background: linear-gradient(180deg, #ffffff 57%, $base-color 43%);
+  }
+
+  .example__title {
+    margin-bottom: 61px;
+  }
+
+  .example__text {
+    margin-bottom: 57px;
+    line-height: 23px;
+  }
+
   .example__costs-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 104px;
   }
 
   .example__list {
     gap: 43px;
+    margin-bottom: 0;
+  }
+
+  .example__item {
+    min-width: 162px;
+    padding-top: 15px;
+    padding-bottom: 19px;
   }
 
   .example__value {
@@ -57,37 +152,89 @@
   }
 
   .example__description {
+    padding: 0 9px;
+    bottom: -9px;
     font-size: 14px;
+    white-space: nowrap;
   }
 
   .example__total {
+    margin-bottom: 0;
     flex-direction: column;
     align-items: end;
+    gap: 9px;
     font-size: 20px;
+  }
+
+  .example__slider {
+    margin: 0 auto;
+    width: 558px;
+  }
+
+  .example__slider-button {
+    top: 50%;
+  }
+
+  .example__slider-button::after {
+    top: -237px;
+    height: 512px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+  .example__description {
+    background-color: #ffffff;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    position: relative;
+    padding-bottom: 74px;
+    border-top: none;
+    background: linear-gradient(180deg, #ffffff 28%, $base-color 28%);
+  }
+
   .example__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
+  .example__title {
+    margin-bottom: 147px;
+  }
+
+  .example__text {
+    margin-bottom: 73px;
+  }
+
   .example__content-wrapper {
-    max-width: 435px;
+    max-width: 433px;
   }
 
   .example__costs-wrapper {
     flex-direction: column;
+    gap: 61px;
+    margin-bottom: 0;
   }
 
   .example__list {
-    justify-content: start;
+    gap: 42px;
+  }
+
+  .example__item {
+    width: auto;
   }
 
   .example__total {
     flex-direction: row;
     justify-content: start;
-    gap: 63px;
+    gap: 66px;
+  }
+
+  .example__slider {
+    position: absolute;
+    right: 111px;
+    top: 46px;
   }
 }
