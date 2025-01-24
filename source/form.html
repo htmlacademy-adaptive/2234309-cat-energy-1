@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-<header class="main-header">
+<header class="main-header main-header--inner">
   <a class="main-header__logo logo" href="index.html">
-    <img src="img/logo-mobile.svg" width="33" height="38" alt="Функциональное питание для котов «Cat Energy».">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" width="202" height="59">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="50">
+      <img src="img/logo-mobile.svg" width="33" height="38" alt="Функциональное питание для котов «Cat Energy».">
+    </picture>
   </a>
   <a class="main-header__logo-mobile logo" href="index.html">
     <img src="img/logo-mobile-name.svg" width="101" height="18" alt="Функциональное питание для котов «Cat Energy».">
@@ -18,70 +22,70 @@
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__item-link" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__item-link" href="catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__item-link">
-            Подбор программы
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__item-link" href="index.html">
+          Главная
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__item-link" href="catalog.html">
+          Каталог продукции
+        </a>
+      </li>
+      <li class="main-nav__item main-nav__item--active">
+        <a class="main-nav__item-link">
+          Подбор программы
+        </a>
+      </li>
+    </ul>
   </nav>
 </header>
 <main class="main-container">
   <section class="selection">
     <header class="selection__header container">
       <h1 class="selection__title title">Подбор программы</h1>
-      <p class="selection__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="selection__subtitle">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
     </header>
-    <form class="selection__form container" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="selection__form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="selection__form-wrapper">
-        <fieldset class="selection__data">
+        <fieldset class="selection__data selection__data--cat-info">
           <legend class="visually-hidden">Данные кота</legend>
-          <div class="selection__field">
-            <label class="selection__label" for="name">Имя:*</label>
-            <input class="selection__field" type="text" name="name" id="name" placeholder="Барсик">
-          </div>
-          <div class="selection__field">
-            <label class="selection__label" for="weight">Вес (кг):*</label>
-            <input class="selection__field" type="text" name="weight" id="weight" placeholder="7">
-          </div>
-          <div class="selection__field">
-            <label class="selection__label" for="age">Возраст&nbsp;(лет):</label>
-            <input class="selection__field" type="text" name="age" id="age" placeholder="7">
+          <div class="selection__data-wrapper">
+            <div class="selection__control">
+              <label class="selection__label" for="name">Имя:*</label>
+              <input class="selection__field" type="text" name="name" id="name" placeholder="Барсик">
+            </div>
+            <div class="selection__control">
+              <label class="selection__label" for="weight">Вес (кг):*</label>
+              <input class="selection__field" type="text" name="weight" id="weight" placeholder="7">
+            </div>
+            <div class="selection__control">
+              <label class="selection__label" for="age">Возраст&nbsp;(лет):</label>
+              <input class="selection__field" type="text" name="age" id="age" placeholder="7">
+            </div>
           </div>
         </fieldset>
-        <fieldset class="selection__data">
+        <fieldset class="selection__data selection__data--choose">
           <legend class="visually-hidden">Выбор программы</legend>
           <ul class="selection__program-list">
             <li class="selection__program-item">
-              <label class="selection__control">
-                <input class="visually-hidden" type="radio" name="type-of-housing" value="weight-loss" checked>
+              <label class="selection__control selection__control--radio">
+                <input class="visually-hidden selection__input" type="radio" name="type-of-housing" value="weight-loss" checked>
                 <span class="selection__control-mark"></span>
                 <span class="selection__label">Похудение</span>
               </label>
             </li>
             <li class="selection__program-item">
-              <label class="selection__control">
-                <input class="visually-hidden" type="radio" name="type-of-housing" value="weight-gain">
+              <label class="selection__control selection__control--radio">
+                <input class="visually-hidden selection__input" type="radio" name="type-of-housing" value="weight-gain">
                 <span class="selection__control-mark"></span>
                 <span class="selection__label">Набор массы</span>
               </label>
             </li>
             <li class="selection__program-item">
-              <label class="selection__control">
-                <input class="visually-hidden" type="radio" name="type-of-housing" value="need-advice">
+              <label class="selection__control selection__control--radio">
+                <input class="visually-hidden selection__input" type="radio" name="type-of-housing" value="need-advice">
                 <span class="selection__control-mark"></span>
                 <span class="selection__label">Не знаю (Нужен ваш совет)</span>
               </label>
@@ -89,49 +93,61 @@
           </ul>
         </fieldset>
       </div>
-      <fieldset class="selection__data">
-        <legend class="selection__legend">Контактные данные
-          (владельца кота)
+      <fieldset class="selection__data selection__data--contact">
+        <legend class="selection__legend">
+          <span class="selection__legend-text">Контактные данные<br> (владельца кота)</span>
         </legend>
-        <div class="selection__form-wrapper">
-          <div class="selection__field selection__field--email">
+        <div class="selection__data-wrapper selection__data-wrapper--contact">
+          <div class="selection__control">
             <label class="selection__label" for="email">E-mail:*</label>
-            <input class="selection__field" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            <input class="selection__field selection__field--with-icon" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            <svg class="selection__field-icon" width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.500336 5.5V13.5H17.5041V5.5M0.500336 0.5H17.5041V2.5L9.00223 8.5L0.500336 2.5V0.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="selection__field selection__field--phone">
+          <div class="selection__control">
             <label class="selection__label" for="phone">Телефон:*</label>
-            <input class="selection__field" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <input class="selection__field selection__field--with-icon" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <svg class="selection__field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </fieldset>
-      <fieldset class="selection__data">
-        <legend class="selection__legend">Комментарий</legend>
+      <fieldset class="selection__data selection__data--comment">
+        <legend class="selection__legend">
+          <span class="selection__legend-text">Комментарий</span>
+        </legend>
         <label class="visually-hidden" for="comment">Комментарий:</label>
         <textarea class="selection__textarea" name="textarea" id="comment" cols="30" rows="10"
                   placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
       <fieldset class="selection__data selection__data--additional">
-        <legend class="selection__legend">Дополнительно</legend>
-        <label class="selection__control">
-          <input class="visually-hidden" type="checkbox" name="sweetener" checked>
-          <span class="selection__control-mark"></span>
-          <span class="selection__label">Сахарозаменитель</span>
-        </label>
-        <label class="selection__control">
-          <input class="visually-hidden" type="checkbox" name="drinking-water">
-          <span class="selection__control-mark"></span>
-          <span class="selection__label">Питьевая вода</span>
-        </label>
-        <label class="selection__control">
-          <input class="visually-hidden" type="checkbox" name="milk">
-          <span class="selection__control-mark"></span>
-          <span class="selection__label">Молоко</span>
-        </label>
-        <label class="selection__control">
-          <input class="visually-hidden" type="checkbox" name="vitamins">
-          <span class="selection__control-mark"></span>
-          <span class="selection__label">Витамины</span>
-        </label>
+        <legend class="selection__legend">
+          <span class="selection__legend-text">Дополнительно</span>
+        </legend>
+        <div class="selection__data-wrapper selection__data-wrapper--additional">
+          <label class="selection__control selection__control--checkbox">
+            <input class="visually-hidden selection__input" type="checkbox" name="sweetener" checked>
+            <span class="selection__control-mark"></span>
+            <span class="selection__label">Сахарозаменитель</span>
+          </label>
+          <label class="selection__control selection__control--checkbox">
+            <input class="visually-hidden selection__input" type="checkbox" name="drinking-water">
+            <span class="selection__control-mark"></span>
+            <span class="selection__label">Питьевая вода</span>
+          </label>
+          <label class="selection__control selection__control--checkbox">
+            <input class="visually-hidden selection__input" type="checkbox" name="milk">
+            <span class="selection__control-mark"></span>
+            <span class="selection__label">Молоко</span>
+          </label>
+          <label class="selection__control selection__control--checkbox">
+            <input class="visually-hidden selection__input" type="checkbox" name="vitamins">
+            <span class="selection__control-mark"></span>
+            <span class="selection__label">Витамины</span>
+          </label>
+        </div>
       </fieldset>
       <div class="selection__send">
         <button class="selection__button button" type="submit">Отправить заявку</button>
@@ -142,21 +158,21 @@
 </main>
 <footer class="main-footer">
   <div class="main-footer__contacts contacts">
-    <div class="contacts__text-wrapper container">
-      <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+    <div class="contacts__text-wrapper">
+      <p class="contacts__title">Приглашаем <br> к&nbsp;сотрудничеству дилеров!</p>
       <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
     </div>
     <div class="contacts__map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719748!2d30.320472476207136!3d59.93871916209473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sen!2sru!4v1735478976549!5m2!1sen!2sru"
-        width="320"
-        height="362"
+        width="100%"
+        height="400"
         allowfullscreen
         title="Офис компании по адресу улица Большая Конюшенная, д. 19/8, Санкт-Петербург"
       ></iframe>
     </div>
   </div>
-  <div class="main-footer__bottom-wrapper container">
+  <div class="main-footer__bottom-wrapper">
     <a class="main-footer__logo-link logo" href="index.html">
       <svg class="main-footer__logo" width="128" height="24" viewBox="0 0 128 24" fill="#111111" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_83854_353)">
@@ -207,16 +223,18 @@
     </div>
     <div class="main-footer__copyright copyright">
       <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_135765_344)">
-          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
-        </g>
-        <defs>
-          <clipPath id="clip0_135765_344">
-            <rect width="27" height="34" fill="white"/>
-          </clipPath>
-        </defs>
-      </svg>
+      <a href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="#666666" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_135765_344)">
+            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_135765_344">
+              <rect width="27" height="34" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>
