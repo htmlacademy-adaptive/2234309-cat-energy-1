@@ -73,6 +73,11 @@
   position: relative;
   padding: 188px 50px 42px 47px;
   background-image: url("../../img/gift-background.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/gift-background@2x.png");
+    background-size: contain;
+  }
 }
 
 .additional__gift::before {
@@ -144,6 +149,11 @@
   .additional__gift {
     padding: 70px 70px 70px 422px;
     background-image: url("../../img/gift-background-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gift-background-tablet@2x.png");
+      background-size: cover;
+    }
   }
 
   .additional__gift::before {
@@ -221,6 +231,11 @@
   .additional__gift {
     padding: 185px 40px 23px;
     background-image: url("../../img/gift-background-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gift-background-desktop@2x.png");
+      background-size: contain;
+    }
   }
 
   .additional__gift::before {
