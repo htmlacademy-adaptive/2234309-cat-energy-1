@@ -25,12 +25,18 @@
   fill: #6B6B6B
 }
 
+.main-footer__contacts--main {
+  background-color: #ffffff;
+}
+
 @media (min-width: $tablet-width) {
   .main-footer__bottom-wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 30px;
+    padding: 57px 30px;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .main-footer__logo-link {
@@ -43,5 +49,7 @@
 @media (min-width: $desktop-width) {
   .main-footer__bottom-wrapper {
     padding: 66px 110px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }

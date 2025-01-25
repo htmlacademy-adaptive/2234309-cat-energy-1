@@ -4,10 +4,8 @@
   gap: 17px;
   background-color: $base-color;
   padding: 26px 20px;
-}
-
-.contacts__text br {
-  display: none;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .contacts__text-wrapper--main {
@@ -26,6 +24,10 @@
   line-height: 20px;
 }
 
+.contacts__text-new-line {
+  display: block;
+}
+
 .contacts__map iframe {
   border: none;
   display: block;
@@ -36,10 +38,8 @@
 @media (min-width: $tablet-width) {
   .contacts__text-wrapper {
     padding: 60px 70px;
-  }
-
-  .contacts__text br {
-    display: block;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .contacts__title {
@@ -52,6 +52,10 @@
     max-width: 190px;
     text-align: right;
     line-height: 20px;
+  }
+
+  .contacts__text-new-line--first {
+    margin-bottom: 18px;
   }
 
   .contacts__map iframe {

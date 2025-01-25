@@ -93,62 +93,68 @@
           </ul>
         </fieldset>
       </div>
-      <fieldset class="selection__data selection__data--contact">
-        <legend class="selection__legend">
-          <span class="selection__legend-text">Контактные данные<br> (владельца кота)</span>
-        </legend>
-        <div class="selection__data-wrapper selection__data-wrapper--contact">
-          <div class="selection__control">
-            <label class="selection__label" for="email">E-mail:*</label>
-            <input class="selection__field selection__field--with-icon" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
-            <svg class="selection__field-icon" width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.500336 5.5V13.5H17.5041V5.5M0.500336 0.5H17.5041V2.5L9.00223 8.5L0.500336 2.5V0.5Z" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+      <div class="selection__data-box">
+        <fieldset class="selection__data selection__data--contact">
+          <legend class="selection__legend">
+            <span class="selection__legend-text">Контактные данные<br> (владельца кота)</span>
+          </legend>
+          <div class="selection__data-wrapper selection__data-wrapper--contact">
+            <div class="selection__control">
+              <label class="selection__label" for="email">E-mail:*</label>
+              <input class="selection__field selection__field--with-icon" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+              <svg class="selection__field-icon" width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.500336 5.5V13.5H17.5041V5.5M0.500336 0.5H17.5041V2.5L9.00223 8.5L0.500336 2.5V0.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="selection__control">
+              <label class="selection__label" for="phone">Телефон:*</label>
+              <input class="selection__field selection__field--with-icon" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+              <svg class="selection__field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </div>
-          <div class="selection__control">
-            <label class="selection__label" for="phone">Телефон:*</label>
-            <input class="selection__field selection__field--with-icon" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-            <svg class="selection__field-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        </fieldset>
+      </div>
+      <div class="selection__data-box">
+        <fieldset class="selection__data selection__data--comment">
+          <legend class="selection__legend">
+            <span class="selection__legend-text">Комментарий</span>
+          </legend>
+          <label class="visually-hidden" for="comment">Комментарий:</label>
+          <textarea class="selection__textarea" name="textarea" id="comment" cols="30" rows="10"
+                    placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+      </div>
+      <div class="selection__data-box">
+        <fieldset class="selection__data selection__data--additional">
+          <legend class="selection__legend">
+            <span class="selection__legend-text">Дополнительно</span>
+          </legend>
+          <div class="selection__data-wrapper selection__data-wrapper--additional">
+            <label class="selection__control selection__control--checkbox">
+              <input class="visually-hidden selection__input" type="checkbox" name="sweetener" checked>
+              <span class="selection__control-mark"></span>
+              <span class="selection__label">Сахарозаменитель</span>
+            </label>
+            <label class="selection__control selection__control--checkbox">
+              <input class="visually-hidden selection__input" type="checkbox" name="drinking-water">
+              <span class="selection__control-mark"></span>
+              <span class="selection__label">Питьевая вода</span>
+            </label>
+            <label class="selection__control selection__control--checkbox">
+              <input class="visually-hidden selection__input" type="checkbox" name="milk">
+              <span class="selection__control-mark"></span>
+              <span class="selection__label">Молоко</span>
+            </label>
+            <label class="selection__control selection__control--checkbox">
+              <input class="visually-hidden selection__input" type="checkbox" name="vitamins">
+              <span class="selection__control-mark"></span>
+              <span class="selection__label">Витамины</span>
+            </label>
           </div>
-        </div>
-      </fieldset>
-      <fieldset class="selection__data selection__data--comment">
-        <legend class="selection__legend">
-          <span class="selection__legend-text">Комментарий</span>
-        </legend>
-        <label class="visually-hidden" for="comment">Комментарий:</label>
-        <textarea class="selection__textarea" name="textarea" id="comment" cols="30" rows="10"
-                  placeholder="Расскажите обо всех повадках кота"></textarea>
-      </fieldset>
-      <fieldset class="selection__data selection__data--additional">
-        <legend class="selection__legend">
-          <span class="selection__legend-text">Дополнительно</span>
-        </legend>
-        <div class="selection__data-wrapper selection__data-wrapper--additional">
-          <label class="selection__control selection__control--checkbox">
-            <input class="visually-hidden selection__input" type="checkbox" name="sweetener" checked>
-            <span class="selection__control-mark"></span>
-            <span class="selection__label">Сахарозаменитель</span>
-          </label>
-          <label class="selection__control selection__control--checkbox">
-            <input class="visually-hidden selection__input" type="checkbox" name="drinking-water">
-            <span class="selection__control-mark"></span>
-            <span class="selection__label">Питьевая вода</span>
-          </label>
-          <label class="selection__control selection__control--checkbox">
-            <input class="visually-hidden selection__input" type="checkbox" name="milk">
-            <span class="selection__control-mark"></span>
-            <span class="selection__label">Молоко</span>
-          </label>
-          <label class="selection__control selection__control--checkbox">
-            <input class="visually-hidden selection__input" type="checkbox" name="vitamins">
-            <span class="selection__control-mark"></span>
-            <span class="selection__label">Витамины</span>
-          </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
       <div class="selection__send">
         <button class="selection__button button" type="submit">Отправить заявку</button>
         <span class="selection__required-fields">* — Обязательные поля</span>
@@ -160,7 +166,10 @@
   <div class="main-footer__contacts contacts">
     <div class="contacts__text-wrapper">
       <p class="contacts__title">Приглашаем <br> к&nbsp;сотрудничеству дилеров!</p>
-      <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
+      <p class="contacts__text">
+        <span class="contacts__text-new-line contacts__text-new-line--first">ул. Большая Конюшенная, д.&nbsp;19/8</span>
+        <span class="contacts__text-new-line">Санкт-Петербург</span>
+      </p>
     </div>
     <div class="contacts__map">
       <iframe
