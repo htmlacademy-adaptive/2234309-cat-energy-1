@@ -13,9 +13,12 @@
   cursor: pointer;
 }
 
-@media (min-width: $tablet-width) {
-  .button {
-    font-size: 20px;
-    line-height: 1.3;
-  }
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  color: rgba(#ffffff, 0.3);
 }

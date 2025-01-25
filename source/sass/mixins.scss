@@ -9,3 +9,9 @@
     line-height: 20px;
   }
 }
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
