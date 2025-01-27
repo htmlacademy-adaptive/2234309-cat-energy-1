@@ -76,7 +76,6 @@
     right: 0;
     z-index: 10;
     width: 100%;
-    border-top: 1px solid #e6e6e6;
     background-color: #ffffff;
   }
 
@@ -85,13 +84,17 @@
   }
 
   .main-nav--nojs {
-    width: 100%;
+    width: calc(100% + 40px);
   }
 
   .main-nav--nojs .main-nav__list {
     position: static;
     display: block;
     min-height: 0;
+  }
+
+  .main-nav__list {
+    border-top: 1px solid #e6e6e6;
   }
 }
 
