@@ -31,6 +31,7 @@
 .contacts__map iframe {
   border: none;
   display: block;
+  width: 100%;
   max-width: 100%;
   height: 362px;
 }
@@ -64,7 +65,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .contacts {
+  .contacts-wrapper {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
@@ -78,6 +79,7 @@
     max-width: 565px;
     padding-left: 80px;
     padding-right: 78px;
+    background-color: #ffffff;
   }
 
   .contacts__text {
