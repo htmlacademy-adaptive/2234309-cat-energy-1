@@ -198,10 +198,11 @@
   .example__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: end;
   }
 
   .example__title {
-    margin-bottom: 147px;
+    margin-bottom: 0;
   }
 
   .example__text {
@@ -233,8 +234,10 @@
   }
 
   .example__slider {
-    position: absolute;
-    right: 111px;
-    top: 46px;
+    margin: -58px 0 11px;
+  }
+
+  .example__slider img {
+    display: block;
   }
 }
