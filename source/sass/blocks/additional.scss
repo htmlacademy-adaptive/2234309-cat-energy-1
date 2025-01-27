@@ -72,11 +72,14 @@
 .additional__gift {
   position: relative;
   padding: 188px 50px 42px 47px;
-  background-image: url("../../img/gift-background.png");
+  background-color: #68B738;
+  background-image: url("../../img/gift-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/gift-background@2x.png");
-    background-size: contain;
+    background-image: url("../../img/gift-background@2x.jpg");
   }
 }
 
@@ -148,10 +151,10 @@
 
   .additional__gift {
     padding: 70px 70px 70px 422px;
-    background-image: url("../../img/gift-background-tablet.png");
+    background-image: url("../../img/gift-background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/gift-background-tablet@2x.png");
+      background-image: url("../../img/gift-background-tablet@2x.jpg");
       background-size: cover;
     }
   }
@@ -230,10 +233,10 @@
 
   .additional__gift {
     padding: 185px 40px 23px;
-    background-image: url("../../img/gift-background-desktop.png");
+    background-image: url("../../img/gift-background-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/gift-background-desktop@2x.png");
+      background-image: url("../../img/gift-background-desktop@2x.jpg");
       background-size: contain;
     }
   }
